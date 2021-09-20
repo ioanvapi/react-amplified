@@ -1,13 +1,27 @@
+import React from 'react'
+import { useEffect, useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifyGreetings } from '@aws-amplify/ui-react'
+import { onAuthUIStateChange } from "@aws-amplify/ui-components";
+
 
 function App() {
+  const [user, setUser] = useState();
+
+  useEffect(() => {
+    return onAuthUIStateChange((nextAuthState, authData) => {
+      setUser(authData)
+    });
+  }, [])
+
   return (
-    <div className="App">
+    <div className="App">   
+    { user ? <AmplifyGreetings username={user.username}></AmplifyGreetings> : <></> }   
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello from React Amplified !!!
         </p>
         <a
           className="App-link"
@@ -22,4 +36,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
