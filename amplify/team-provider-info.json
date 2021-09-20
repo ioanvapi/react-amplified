@@ -14,6 +14,16 @@
     "categories": {
       "auth": {
         "reactamplified97e526c5": {}
+      },
+      "function": {
+        "reactAmplifiedItems": {
+          "deploymentBucketName": "amplify-reactamplified-dev-164615-deployment",
+          "s3Key": "amplify-builds/reactAmplifiedItems-57615577542f6f683668-build.zip"
+        },
+        "reactAmplifiedTodos": {
+          "deploymentBucketName": "amplify-reactamplified-dev-164615-deployment",
+          "s3Key": "amplify-builds/reactAmplifiedTodos-662b48534d3633565843-build.zip"
+        }
       }
     }
   }
