@@ -21,7 +21,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Hello from React Amplified !!!
+          Hello from React Amplified Changed!!!
         </p>
         <a
           className="App-link"
