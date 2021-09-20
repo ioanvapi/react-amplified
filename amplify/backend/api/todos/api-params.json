@@ -1,0 +1,68 @@
+{
+  "paths": [
+    {
+      "name": "/todos",
+      "lambdaFunction": "reactAmplifiedTodos",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/todos"
+    },
+    {
+      "name": "/items",
+      "lambdaFunction": "reactAmplifiedItems",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "todos",
+  "apiName": "todos",
+  "functionArns": [
+    {
+      "lambdaFunction": "reactAmplifiedTodos"
+    },
+    {
+      "lambdaFunction": "reactAmplifiedItems"
+    }
+  ],
+  "privacy": {
+    "auth": 2,
+    "unauth": 0,
+    "authRoleName": "amplify-reactamplified-dev-164615-authRole",
+    "unAuthRoleName": "amplify-reactamplified-dev-164615-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "reactAmplifiedTodos",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    },
+    {
+      "category": "function",
+      "resourceName": "reactAmplifiedItems",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
