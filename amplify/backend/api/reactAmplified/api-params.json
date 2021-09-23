@@ -1,0 +1,42 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "reactAmplifiedItems",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "reactAmplified",
+  "apiName": "reactAmplified",
+  "functionArns": [
+    {
+      "lambdaFunction": "reactAmplifiedItems"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-reactamplified-dev-143720-authRole",
+    "unAuthRoleName": "amplify-reactamplified-dev-143720-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "reactAmplifiedItems",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}
