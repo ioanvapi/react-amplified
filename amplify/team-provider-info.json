@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "reactamplifieda7a1eac7": {}
+      },
+      "function": {
+        "reactAmplifiedItems": {
+          "deploymentBucketName": "amplify-reactamplified-dev-143720-deployment",
+          "s3Key": "amplify-builds/reactAmplifiedItems-5a4d386354383773447a-build.zip"
+        }
       }
     }
   }
