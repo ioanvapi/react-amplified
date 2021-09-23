@@ -24,7 +24,7 @@ function App() {
   }
 
   const getData = async () => {
-    const apiName = 'todos';
+    const apiName = 'reactAmplified';
     const path = '/items'; 
     return await API.get(apiName, path)
   }
